@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Aulas de JavaScript</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center">Aula - 02 JavaScript (oxetech) Prof.: Nicollas</h1>
+        <p class="text-center">Aluno: Ervaldo Silva</p>
+
+    </div>
+    <div class="row">
+        <div class="col-6 mt-5">
+            <label for="aluno" class="form-label" >Aluno</label>
+            <input type="text" class="form-control"  name="aluno" id="aluno">
+        </div>
+
+        <div class="col-3 mt-5">
+            <label for="nota" class="form-label">Nota</label>
+            <input type="number" class="form-control" name="nota" id="nota">
+        </div>
+
+        <div class="col-3 mt-5">
+            <label for="frequencia" class="form-label">Frequencia</label>
+            <input type="number" class="form-control" name="frequencia" id="frequencia">
+        </div>
+
+        <div class="col-3 mt-2">
+        <button type="submit" onclick="enviar()" class="btn btn-primary">Enviar</button>
+        </div>
+        </div>
+
+        <div class="col-3 mt-2">
+            <p id="resultado"></p>
+        </div>
+        
+
+    </div>
+</div>
+    
+<script>
+
+    function enviar() {    
+
+    let aluno = document.getElementById("aluno").value;
+    console.log(aluno);
+
+    let nota = document.getElementById("nota").value;
+    console.log(nota);
+
+    let frequencia = document.getElementById("frequencia").value;
+    console.log(frequencia);
+
+    if (nota >= 9 && nota <= 10 && frequencia <= 10 ){
+        alert(aluno + ", parabens, você estar aprovado com louvor");
+
+    }else if (nota >= 7 && nota < 9 && frequencia <= 10 ){
+        alert(aluno + ", parabéns, você estar aprovado");
+
+    }else if (nota >= 4 && nota <= 6 && frequencia <= 10 ){
+        alert(aluno + ", Infelismente, você estar em recuperação");
+
+    }else{
+        alert(aluno + ", infelismente, você estar em reprovado");
+    }
+
+    }
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+  </body>
+</html>
