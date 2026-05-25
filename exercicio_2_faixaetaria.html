@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<had>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Exercício_01_Habilitação</title>
+    </head>
+
+    <body>
+        <div class="container">
+        <div class="row">
+            
+                <h1 class="text-center">Exercício 2 - Faixa Etária</h1>
+        <hr>
+                <p>Crie um programa que solicite ao usuário sua <strong>idade</strong> e, com base na idade fornecida,
+                    imprima uma mensagem indicando a faixa etária correspondente: uma mensagem informando:</p>
+                <p>- Idade maior ou igual a <strong>65</strong>: Você é um idoso.<br>
+                    - Idade maior ou igual a <strong>18</strong>: Você é um adulto.<br>
+                    - Idade maior ou igual a <strong>13</strong>: Você é um adolescente.<br>
+                    - Senão a saída deve ser: Você é uma criança.<br>
+                </p>
+
+        <hr>
+        
+        <div class="row-12">
+            <div class="col-2">
+                <label for="idadeInformada" class="form-label">Idade informada:</label>
+                <input class="form-control form-control-lg" type="number" placeholder="Informe sua idade"
+                    name="idadeInformada" id="idadeInformada" autofocus>
+            </div>
+
+            <div class="col-12 mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Resposta:</label>
+                <input class="form-control form-control-lg" type="text" name="resultado" id="resultado" readonly>
+            </div>
+
+            <div class="col-3 mb-3">
+                <button type="submit" onclick="idade()" class="btn btn-primary">Calcular</button>
+            </div>
+
+        </div>
+
+        </div>
+</div>
+        <script>
+            function idade() {
+
+                const idadeInformada = document.getElementById("idadeInformada").value;
+                const resultado = document.getElementById("resultado");
+
+                const nascimento = Number(idadeInformada);
+
+                if (nascimento >= 65) {
+                    resultado.value = "Você tem, " + nascimento + " anos de idade, e é um idoso";
+                } else if (nascimento >= 18) {
+                    resultado.value = "Você tem, " + nascimento + " anos de idade, e é um adulto";
+                } else if (nascimento >= 13) {
+                    resultado.value = "Você tem, " + nascimento + " anos de idade, e é um adolescente";
+                } else {
+                    resultado.value = "Você tem, " + nascimento + " anos de idade, e ainda é um Criança";
+                }
+
+            }
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
